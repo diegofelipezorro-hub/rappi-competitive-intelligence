@@ -1,0 +1,84 @@
+{
+  "fast_food": [
+    {
+      "name": "Big Mac",
+      "restaurant": "McDonald's",
+      "category": "fast_food",
+      "search_terms": [
+        "big mac"
+      ]
+    },
+    {
+      "name": "Combo Big Mac Mediano",
+      "restaurant": "McDonald's",
+      "category": "fast_food",
+      "search_terms": [
+        "mctrio mediano big mac",
+        "mctrio mediano big mac",
+        "combo big mac mediano",
+        "big mac mediano"
+      ]
+    },
+    {
+      "name": "McNuggets 10 piezas",
+      "restaurant": "McDonald's",
+      "category": "fast_food",
+      "search_terms": [
+        "mcnuggets de pollo 10",
+        "mcnuggets 10 piezas",
+        "nuggets 10 pzas"
+      ]
+    },
+    {
+      "name": "Whopper",
+      "restaurant": "Burger King",
+      "category": "fast_food",
+      "search_terms": [
+        "whopper con queso",
+        "whopper sencillo",
+        "whopper"
+      ]
+    },
+    {
+      "name": "Combo Whopper Mediano",
+      "restaurant": "Burger King",
+      "category": "fast_food",
+      "search_terms": [
+        "combo whopper",
+        "whopper combo mediano"
+      ]
+    }
+  ],
+  "retail": [
+    {
+      "name": "Coca-Cola 500ml",
+      "store": "OXXO/7-Eleven",
+      "category": "retail",
+      "search_terms": [
+        "Coca-Cola 500",
+        "Coca Cola 500ml",
+        "Coca Cola 500"
+      ]
+    },
+    {
+      "name": "Agua Bonafont 1L",
+      "store": "OXXO/7-Eleven",
+      "category": "retail",
+      "search_terms": [
+        "Agua Bonafont 1L",
+        "Bonafont 1 litro",
+        "Agua Bonafont 1"
+      ]
+    },
+    {
+      "name": "Pañales Huggies Talla 3 (30pz)",
+      "store": "Farmacia/Super",
+      "category": "retail",
+      "search_terms": [
+        "Pañales Huggies Talla 3",
+        "Huggies T3",
+        "Pañales Huggies 30"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables (never commit secrets)
+.env
+
+# Scraped data — run `python run_scraper.py --mode mock` to regenerate
+data/raw/*.json
+data/processed/*.csv
+
+# Generated reports
+reports/*.html
+
+# Investigation/temp scripts (findings documented in scraper/didifood_scraper.py)
+scraper/_didifood_*.py
+
+# Network capture logs (raw API responses from platform research)
+data/raw/network_log_*.json
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large binary files
+*.pdf
+
+# Streamlit cache
+.streamlit/secrets.toml

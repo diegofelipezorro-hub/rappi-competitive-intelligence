@@ -1,0 +1,304 @@
+{
+  "addresses": [
+    {
+      "id": "cdmx_premium_01",
+      "address": "Presidente Masaryk 61, Polanco, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Polanco",
+      "zone_type": "premium",
+      "lat": 19.4316,
+      "lng": -99.1989,
+      "justification": "Alta densidad de usuarios premium, ticket promedio más alto de CDMX, test de sensibilidad de precio"
+    },
+    {
+      "id": "cdmx_premium_02",
+      "address": "Álvaro Obregón 311, Roma Norte, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Roma Norte",
+      "zone_type": "premium",
+      "lat": 19.4165,
+      "lng": -99.1653,
+      "justification": "Zona millennial de alta frecuencia de pedidos, mix de restaurantes independientes y cadenas"
+    },
+    {
+      "id": "cdmx_premium_03",
+      "address": "Presidente Carranza 198, Coyoacán, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Coyoacán",
+      "zone_type": "premium",
+      "lat": 19.3452,
+      "lng": -99.1616,
+      "justification": "Zona familiar, mix amplio de categorías, alta frecuencia en fines de semana"
+    },
+    {
+      "id": "cdmx_premium_04",
+      "address": "Insurgentes Sur 1602, Florida, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Florida",
+      "zone_type": "premium",
+      "lat": 19.3798,
+      "lng": -99.1790,
+      "justification": "Corredor empresarial, pico de demanda en horas de almuerzo L-V"
+    },
+    {
+      "id": "cdmx_premium_05",
+      "address": "Molière 222, Polanco, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Polanco",
+      "zone_type": "premium",
+      "lat": 19.4350,
+      "lng": -99.2010,
+      "justification": "Zona corporativa y residencial premium, benchmark de precios máximos"
+    },
+    {
+      "id": "cdmx_media_01",
+      "address": "Eje Central Lázaro Cárdenas 911, Centro, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Centro Histórico",
+      "zone_type": "media",
+      "lat": 19.4284,
+      "lng": -99.1398,
+      "justification": "Alta densidad poblacional, usuarios price-sensitive, test de competitividad de fees"
+    },
+    {
+      "id": "cdmx_media_02",
+      "address": "Calzada de Tlalpan 3386, Coapa, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Coapa",
+      "zone_type": "media",
+      "lat": 19.3065,
+      "lng": -99.1399,
+      "justification": "Zona familiar clase media, alto volumen de pedidos de restaurantes familiares"
+    },
+    {
+      "id": "cdmx_media_03",
+      "address": "Av. Insurgentes Norte 1235, Gustavo A. Madero, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Gustavo A. Madero",
+      "zone_type": "media",
+      "lat": 19.4830,
+      "lng": -99.1279,
+      "justification": "Zona norte con alta competencia entre plataformas, indicador de expansión"
+    },
+    {
+      "id": "cdmx_media_04",
+      "address": "Ermita Iztapalapa 4624, Iztapalapa, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Iztapalapa",
+      "zone_type": "media",
+      "lat": 19.3654,
+      "lng": -99.0676,
+      "justification": "Zona popular de alta sensibilidad a delivery fees, test de elasticidad"
+    },
+    {
+      "id": "cdmx_media_05",
+      "address": "División del Norte 2799, Del Valle, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Del Valle",
+      "zone_type": "media",
+      "lat": 19.3836,
+      "lng": -99.1672,
+      "justification": "Zona residencial media con mezcla de familias y jóvenes profesionales"
+    },
+    {
+      "id": "cdmx_periferica_01",
+      "address": "Av. Central 500, Ecatepec, Estado de México",
+      "city": "cdmx",
+      "zone": "Ecatepec",
+      "zone_type": "periferica",
+      "lat": 19.6009,
+      "lng": -99.0479,
+      "justification": "Zona metropolitana norte, mayor mercado periférico, precio muy sensible"
+    },
+    {
+      "id": "cdmx_periferica_02",
+      "address": "Blvd. Adolfo López Mateos 2350, Atizapán, Estado de México",
+      "city": "cdmx",
+      "zone": "Atizapán",
+      "zone_type": "periferica",
+      "lat": 19.5639,
+      "lng": -99.2619,
+      "justification": "Zona suburbana oeste en crecimiento, diferencial de cobertura importante"
+    },
+    {
+      "id": "cdmx_periferica_03",
+      "address": "Av. México 140, Naucalpan, Estado de México",
+      "city": "cdmx",
+      "zone": "Naucalpan",
+      "zone_type": "periferica",
+      "lat": 19.4779,
+      "lng": -99.2319,
+      "justification": "Periferia premium norte, zona industrial + residencial, diferencial de cobertura"
+    },
+    {
+      "id": "cdmx_periferica_04",
+      "address": "Periférico Sur 4690, Pedregal, Ciudad de México",
+      "city": "cdmx",
+      "zone": "Pedregal",
+      "zone_type": "periferica",
+      "lat": 19.3165,
+      "lng": -99.2008,
+      "justification": "Zona suburbana sur con gap de cobertura entre plataformas"
+    },
+    {
+      "id": "cdmx_periferica_05",
+      "address": "Av. Texcoco 45, Nezahualcóyotl, Estado de México",
+      "city": "cdmx",
+      "zone": "Nezahualcóyotl",
+      "zone_type": "periferica",
+      "lat": 19.4065,
+      "lng": -99.0157,
+      "justification": "Zona popular oriente, alta densidad, test de penetración en mercados emergentes"
+    },
+    {
+      "id": "gdl_01",
+      "address": "Av. Vallarta 3959, Zapopan, Jalisco",
+      "city": "guadalajara",
+      "zone": "Zapopan Vallarta",
+      "zone_type": "premium",
+      "lat": 20.6858,
+      "lng": -103.4127,
+      "justification": "Zona premium GDL, segundo mercado de Rappi, benchmark de competitividad regional"
+    },
+    {
+      "id": "gdl_02",
+      "address": "López Cotilla 1666, Col. Americana, Guadalajara, Jalisco",
+      "city": "guadalajara",
+      "zone": "Col. Americana",
+      "zone_type": "premium",
+      "lat": 20.6713,
+      "lng": -103.3841,
+      "justification": "Zona hipster/millennial GDL, alta frecuencia, comparación con Roma Norte CDMX"
+    },
+    {
+      "id": "gdl_03",
+      "address": "Av. Patria 1201, Zapopan, Jalisco",
+      "city": "guadalajara",
+      "zone": "Zapopan Norte",
+      "zone_type": "media",
+      "lat": 20.7228,
+      "lng": -103.3954,
+      "justification": "Zona corporativa norte GDL, pico de demanda en almuerzo"
+    },
+    {
+      "id": "gdl_04",
+      "address": "Calzada Independencia 1000, Guadalajara Centro, Jalisco",
+      "city": "guadalajara",
+      "zone": "Guadalajara Centro",
+      "zone_type": "media",
+      "lat": 20.6682,
+      "lng": -103.3430,
+      "justification": "Zona tradicional GDL, alta densidad, price-sensitive"
+    },
+    {
+      "id": "gdl_05",
+      "address": "Av. López Mateos Sur 2375, Tlaquepaque, Jalisco",
+      "city": "guadalajara",
+      "zone": "Tlaquepaque",
+      "zone_type": "periferica",
+      "lat": 20.6269,
+      "lng": -103.3468,
+      "justification": "Zona suburbana sur GDL, cobertura en expansión"
+    },
+    {
+      "id": "mty_01",
+      "address": "Av. Vasconcelos 150, San Pedro Garza García, Nuevo León",
+      "city": "monterrey",
+      "zone": "San Pedro Garza García",
+      "zone_type": "premium",
+      "lat": 25.6667,
+      "lng": -100.4000,
+      "justification": "Zona más premium de MTY, usuarios de mayor ticket, test de pricing premium"
+    },
+    {
+      "id": "mty_02",
+      "address": "Av. Constitución 300, Centro Monterrey, Nuevo León",
+      "city": "monterrey",
+      "zone": "Monterrey Centro",
+      "zone_type": "media",
+      "lat": 25.6695,
+      "lng": -100.3098,
+      "justification": "Zona comercial tradicional MTY, alta densidad de restaurantes"
+    },
+    {
+      "id": "mty_03",
+      "address": "Av. Eugenio Garza Sada 2501, Monterrey Sur, Nuevo León",
+      "city": "monterrey",
+      "zone": "Monterrey Sur",
+      "zone_type": "media",
+      "lat": 25.6472,
+      "lng": -100.2869,
+      "justification": "Zona universitaria, alta demanda nocturna, segmento estudiantes"
+    },
+    {
+      "id": "mty_04",
+      "address": "Blvd. Díaz Ordaz 220, Santa Catarina, Nuevo León",
+      "city": "monterrey",
+      "zone": "Santa Catarina",
+      "zone_type": "periferica",
+      "lat": 25.6742,
+      "lng": -100.4609,
+      "justification": "Zona industrial/suburbana, diferencial de cobertura, oportunidad de expansión"
+    },
+    {
+      "id": "mty_05",
+      "address": "Av. Revolución 2703, Monterrey, Nuevo León",
+      "city": "monterrey",
+      "zone": "Monterrey Media",
+      "zone_type": "media",
+      "lat": 25.7176,
+      "lng": -100.3563,
+      "justification": "Zona media residencial MTY, benchmark de clase media regia"
+    },
+    {
+      "id": "sec_puebla",
+      "address": "Av. Universidad 1500, Puebla Centro, Puebla",
+      "city": "puebla",
+      "zone": "Puebla Centro",
+      "zone_type": "media",
+      "lat": 19.0399,
+      "lng": -98.2063,
+      "justification": "4ta ciudad de México, mercado en crecimiento, benchmark de ciudades secundarias"
+    },
+    {
+      "id": "sec_tijuana",
+      "address": "Blvd. Agua Caliente 4558, Tijuana, Baja California",
+      "city": "tijuana",
+      "zone": "Tijuana Premium",
+      "zone_type": "media",
+      "lat": 32.5027,
+      "lng": -117.0045,
+      "justification": "Frontera norte, patrones únicos de consumo, influencia del mercado US"
+    },
+    {
+      "id": "sec_leon",
+      "address": "Av. Juárez 1000, León, Guanajuato",
+      "city": "leon",
+      "zone": "León Centro",
+      "zone_type": "media",
+      "lat": 21.1219,
+      "lng": -101.6822,
+      "justification": "Ciudad industrial media en el Bajío, mercado emergente para delivery"
+    },
+    {
+      "id": "sec_merida",
+      "address": "Av. Hidalgo 777, Mérida, Yucatán",
+      "city": "merida",
+      "zone": "Mérida Centro",
+      "zone_type": "media",
+      "lat": 20.9674,
+      "lng": -89.6231,
+      "justification": "Sureste en crecimiento acelerado, nueva frontera de expansión de Rappi"
+    },
+    {
+      "id": "sec_cancun",
+      "address": "Av. Solidaridad 500, Cancún, Quintana Roo",
+      "city": "cancun",
+      "zone": "Cancún Turístico",
+      "zone_type": "premium",
+      "lat": 21.1619,
+      "lng": -86.8515,
+      "justification": "Zona turística con precios inflados, dinámica distinta de demanda, test de pricing especial"
+    }
+  ]
+}
