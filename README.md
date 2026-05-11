@@ -220,6 +220,84 @@ Puebla, Tijuana, León, Mérida, Cancún — representan el mercado de expansió
 
 ---
 
+## Mejor Stack para Producción Real
+
+Esta sección documenta qué herramientas usar si se quisiera llevar este sistema a producción completa, plataforma por plataforma.
+
+---
+
+### Rappi — ya funciona, escalar con proxies residenciales
+
+El scraper actual (requests + API interna) es el enfoque correcto. En producción a escala, el único riesgo es bloqueo por IP repetición.
+
+**Solución recomendada: [Bright Data Residential Proxies](https://brightdata.com)**
+- Precio: ~$15 USD/GB (aprox. $150-300/mes para monitoreo diario de 30 direcciones × 8 productos)
+- Por qué Bright Data: red de 72M+ IPs residenciales reales, rotación automática, geo-targeting por ciudad (CDMX, GDL, MTY)
+- Integración: solo cambiar el parámetro `proxies=` en `requests.get()` — el scraper no cambia
+- Alternativa más barata: **[Oxylabs](https://oxylabs.io)** ~$10/GB, menor red pero suficiente para México
+
+---
+
+### Uber Eats — extender cobertura a todas las ciudades
+
+El problema actual: la API interna (`getFeedV1`) solo devuelve restaurantes dentro de un radio geográfico real. Fuera de CDMX, no encuentra tiendas porque la IP no está geolocalizada.
+
+**Solución recomendada: [Bright Data Residential Proxies con geo-targeting por ciudad](https://brightdata.com)**
+- Mismo precio que arriba (~$15/GB), pero con IPs específicas de Guadalajara, Monterrey, Puebla, etc.
+- Bright Data permite seleccionar IPs por ciudad mexicana — la API de Uber Eats "ve" una IP de GDL y devuelve restaurantes de GDL
+- Esto resuelve el problema de cobertura geográfica sin cambiar nada del scraper
+
+---
+
+### DiDi Food — el más difícil, requiere enfoque mobile
+
+DiDi es el reto real. El problema no es el scraping en sí, sino que:
+1. La app requiere login (cookie `ticket` efímero)
+2. Las firmas `wsgsig` se generan en un SDK JS ofuscado que cambia con cada versión de app
+3. No existe interfaz web pública
+
+**Opción A — Automatización mobile con Appium (recomendada para uso interno)**
+- **[Appium](https://appium.io)** + emulador Android: automatiza la app móvil real de DiDi Food
+- **[mitmproxy](https://mitmproxy.org)** (gratuito): intercepta el tráfico HTTPS del emulador para capturar las respuestas de la API
+- Precio: $0 (open source) + servidor cloud para el emulador (~$50-80/mes en GCP/AWS con instancia e2-standard-2)
+- Limitación: requiere gestionar actualizaciones de la app y el login periódico
+
+**Opción B — Bright Data Mobile Proxies + Scraping Browser (recomendada si DiDi es prioritario)**
+- **[Bright Data Scraping Browser](https://brightdata.com/products/scraping-browser)**: browser gestionado en la nube con bypass de anti-bot automático
+- Precio: ~$8.4 USD/GB de datos transferidos (aprox. $200-400/mes para cobertura completa)
+- Por qué funciona: Bright Data gestiona las firmas anti-bot, fingerprinting de dispositivo y rotación de sesiones — tú solo escribes el código de extracción
+- Integración: Playwright apunta al endpoint de Bright Data en vez del Chromium local — 3 líneas de cambio en el código
+
+**Opción C — Servicio especializado Zyte API**
+- **[Zyte API](https://www.zyte.com/zyte-api/)** (ex-Scrapy Cloud): bypass automático de anti-bot, soporte para apps móviles
+- Precio: $0.10 USD por 1,000 requests (muy barato para volumen moderado, ~$20-50/mes)
+- Por qué considerarlo: Zyte tiene experiencia específica con apps de food delivery en Latinoamérica
+
+---
+
+### Stack completo recomendado para producción
+
+| Plataforma | Herramienta | Precio estimado/mes |
+|---|---|---|
+| **Rappi** | requests actuales + Bright Data Residential | $150–300 USD |
+| **Uber Eats** | requests actuales + Bright Data con geo-targeting | (incluido arriba) |
+| **DiDi Food** | Appium + mitmproxy + emulador GCP | $50–80 USD |
+| **Orquestación** | GitHub Actions (cron diario) | $0–4 USD |
+| **Almacenamiento** | Google Cloud Storage o Supabase | $5–20 USD |
+| **Total estimado** | | **$205–404 USD/mes** |
+
+Para un equipo de Competitive Intelligence que necesita datos frescos diariamente de 3 plataformas en 8 ciudades, este costo representa menos de 1 hora de trabajo de un analista — ROI claro si el sistema alimenta decisiones de pricing.
+
+---
+
+### ¿Por qué no usar servicios "todo en uno" como ScraperAPI o Apify?
+
+- **ScraperAPI** (~$49/mes): funciona bien para sitios simples, pero no tiene bypass nativo para `wsgsig` de DiDi ni para los headers específicos de Uber Eats — terminarías pagando por algo que el scraper actual ya hace mejor
+- **Apify** (~$49-499/mes): plataforma excelente para scraping general, pero cobran por cómputo + almacenamiento y no tienen actores mantenidos para estas plataformas en México específicamente
+- **Recomendación**: para este caso de uso es más eficiente mantener los scrapers propios (que ya conocen las APIs internas) y solo delegar el problema de proxies/IP a Bright Data
+
+---
+
 ## Stack Tecnológico
 
 | Componente | Tecnología | Justificación |
